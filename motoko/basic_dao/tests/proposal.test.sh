@@ -112,7 +112,7 @@ identity bob;
 call DAO.submit_proposal(
   record {
     canister_id = DAO;
-    method = "transfer2";
+    method = "transfer";
     message = encode DAO.transfer(record { to = alice; amount = record { amount_e8s = 100 } });
   },
 );
@@ -120,7 +120,7 @@ let bob1 = _.ok;
 call DAO.submit_proposal(
   record {
     canister_id = DAO;
-    method = "transfer2";
+    method = "transfer";
     message = encode DAO.transfer(record { to = alice; amount = record { amount_e8s = 100 } });
   },
 );
